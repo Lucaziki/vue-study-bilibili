@@ -1,37 +1,28 @@
 <template>
-  <div>
-    <div style="width: 100px; height: 30px; border: 1px solid">
-      <Item :isActive="curActive === 'dongman'" @active="curActive = 'dongman'">
-        动漫
-      </Item>
-    </div>
-    <div style="width: 100px; height: 30px; border: 1px solid">
-      <Item
-        :isActive="curActive === 'dianjing'"
-        @active="curActive = 'dianjing'"
-      >
-        电竞
-      </Item>
-    </div>
+  <div id="app">
+    <img alt="Vue logo" src="./assets/logo.png">
+    <HelloWorld msg="Welcome to Your Vue.js App"/>
   </div>
 </template>
 
 <script>
-import Item from "./components/Item";
-export default {
-  components: {
-    Item,
-  },
-  data() {
-    return {
-      curActive: "dongman",
-    };
-  },
+import HelloWorld from './components/HelloWorld.vue'
 
-  methods: {
-    test(e) {
-      console.log(e);
-    },
-  },
-};
+export default {
+  name: 'App',
+  components: {
+    HelloWorld
+  }
+}
 </script>
+
+<style>
+#app {
+  font-family: Avenir, Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: center;
+  color: #2c3e50;
+  margin-top: 60px;
+}
+</style>
