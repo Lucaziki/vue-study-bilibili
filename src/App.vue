@@ -6,6 +6,7 @@
         <template v-slot:icon>></template>
       </TitleMenu>
       <ChannelList
+        :columns="2"
         :activeId="activeId"
         @active="activeId = $event"
       ></ChannelList>

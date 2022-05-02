@@ -33,7 +33,7 @@ export default {
 .channel {
   width: 100%;
   height: 40px;
-  line-height: 46px;
+  line-height: 40px;
 }
 
 .inner {
