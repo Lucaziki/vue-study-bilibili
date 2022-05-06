@@ -1,6 +1,6 @@
 <template>
   <div class="aside">
-    <Search />
+    <ChannelSearch />
     <TitleMenu :isActive="activeId === 100" @active="activeId = 100">
       <template v-slot:title>发现频道</template>
       <template v-slot:icon>></template>
@@ -16,12 +16,12 @@
 <script>
 import TitleMenu from "./TitleMenu";
 import ChannelList from "./ChannelList";
-import Search from "./ChannelSearch";
+import ChannelSearch from "./ChannelSearch";
 export default {
   components: {
     TitleMenu,
     ChannelList,
-    Search,
+    ChannelSearch,
   },
 
   data() {

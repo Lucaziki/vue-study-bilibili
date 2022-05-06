@@ -1,17 +1,13 @@
 <template>
-  <div style="width: 250px; height: 500px">
-    <Aside />
-  </div>
+  <Channel />
 </template>
 
 <script>
-import Aside from "./components/Aside";
+import Channel from "./pages/Channel.vue";
 
 export default {
   components: {
-    Aside,
+    Channel,
   },
 };
 </script>
-
-<style scoped></style>
