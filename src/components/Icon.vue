@@ -29,5 +29,5 @@ export default {
 </script>
 
 <style scoped>
-@import "//at.alicdn.com/t/font_3372299_4s8a7tkeiph.css";
+@import "//at.alicdn.com/t/font_3372299_9fl1vin2xkq.css";
 </style>
