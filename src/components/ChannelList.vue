@@ -21,10 +21,7 @@
     </div>
     <div class="collapse" @click="isExpand = !isExpand">
       <span>{{ isExpand ? "收起" : "展开" }}</span>
-      <i
-        class="iconfont"
-        :class="isExpand ? 'icon-xiangshangjiantou' : 'icon-xiangxiajiantou'"
-      ></i>
+      <Icon :type="isExpand ? 'arrowUp' : 'arrowDown'" extraClass="icon" />
     </div>
   </div>
 </template>
@@ -32,9 +29,11 @@
 <script>
 import Channel from "./Channel";
 import ChannelService from "../services/channel";
+import Icon from "./Icon";
 export default {
   components: {
     Channel,
+    Icon,
   },
   props: {
     activeId: {
@@ -58,7 +57,6 @@ export default {
       if (this.isExpand) {
         rows = Math.ceil(this.channels.length / this.columns);
       }
-      console.log(rows);
       return rows * 40;
     },
   },
@@ -71,7 +69,6 @@ export default {
 </script>
 
 <style scoped>
-@import "//at.alicdn.com/t/font_3372299_4s8a7tkeiph.css";
 .channel-list {
   overflow: hidden;
   transition: 0.2s;
@@ -87,9 +84,10 @@ export default {
   color: #999;
   font-size: 14px;
   cursor: pointer;
+  border-bottom: 1px solid #e7e7e7;
 }
 
-.iconfont {
+.icon {
   font-size: 12px;
   margin-left: 5px;
 }
