@@ -21,7 +21,7 @@ export default {
 <style scoped>
 .channel-search {
   width: 100%;
-  height: 30px;
+  height: 34px;
   box-sizing: border-box;
   padding: 0 18px;
   margin: 18px 0;
