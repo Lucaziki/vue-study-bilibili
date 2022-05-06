@@ -1,35 +1,17 @@
 <template>
-  <div>
-    <div style="width: 250px">
-      <Search />
-      <TitleMenu :isActive="activeId === 100" @active="activeId = 100">
-        <template v-slot:title>发现频道</template>
-        <template v-slot:icon>></template>
-      </TitleMenu>
-      <ChannelList
-        :columns="2"
-        :activeId="activeId"
-        @active="activeId = $event"
-      ></ChannelList>
-    </div>
+  <div style="width: 250px; height: 500px">
+    <Aside />
   </div>
 </template>
 
 <script>
-import TitleMenu from "./components/TitleMenu";
-import ChannelList from "./components/ChannelList";
-import Search from "./components/ChannelSearch";
+import Aside from "./components/Aside";
+
 export default {
   components: {
-    TitleMenu,
-    ChannelList,
-    Search,
-  },
-
-  data() {
-    return {
-      activeId: 100,
-    };
+    Aside,
   },
 };
 </script>
+
+<style scoped></style>
